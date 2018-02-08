@@ -109,17 +109,17 @@
               $("#append_question").append("<li><div class='row row1' >" +
                   "<div class='col-sm-2 col-xs-2 col1'>" +
                   "<p style='margin: 0;'>" + count_like + "</p>" +
-                  "<p style='font-size: 13px;'>Thích</p>" +
+                  "<p style='font-size: 13px;'>Like</p>" +
                   "</div>" +
                   "<div class='col-sm-10 col-xs-10'>" +
                   "<h6 style='margin: 0;'>" + icon_question + "</h6>" +
-                  "<p style='margin: 5px; font-size: 15px;  color: #706f6f;'>Chào Bạn . Mình là Lucy</p>" +
-                  "<p style='font-size: 12px; margin: 5px; color:#706f6f; '>JADON trả lời " + getdaynow + "</p>" +
+                  "<p style='margin: 5px; font-size: 15px;  color: #706f6f;'>Hello . I'm Lucy</p>" +
+                  "<p style='font-size: 12px; margin: 5px; color:#706f6f; '>JADON Reply " + getdaynow + "</p>" +
                   "<div>" +
                   "<a href='' class='icon_question_like' ><i class='fa fa-thumbs-o-up' aria-hidden='true'>" +
-                  "</i><span style='font-size: 14px; margin-left: 5px;'>Thích</span></a>" +
+                  "</i><span style='font-size: 14px; margin-left: 5px;'>Like</span></a>" +
                   "<a href=''  class='icon_question_rep'><i class='fa fa-reply' aria-hidden='true'>" +
-                  "</i><span style='font-size: 14px; margin-left: 5px;'>Trả Lời</span></a>" +
+                  "</i><span style='font-size: 14px; margin-left: 5px;'>Reply</span></a>" +
                   "</div>" +
                   "</div>" +
                   "</div></li>"
@@ -127,7 +127,7 @@
               $('input[name=input_question]').val('');
         }
         else{
-          alert("Nhập đầy đủ thông tin đi cưng");
+          alert("You not inport full information!");
         }
               $(".icon_question_like").click(function(e) {
               e.preventDefault();
@@ -241,7 +241,7 @@
       
               '<p class="buy_already">' +
               '<i style="margin-right: 10px; color:#0a7203" class="fa fa-unlock-alt" aria-hidden="true">' +
-              '</i>Đã mua gói tại JaDON</p>' +
+              '</i>You bought this at JaDON</p>' +
               '<div class="description">' +
               '<p class="review_detail">' +
               '<span>' + textarea + '</span>' +
@@ -249,13 +249,13 @@
               '</div>' +
               '<div class="link">' +
               '<p class="review_action">' +
-              '<a class="share" href="#">Gửi trả lời </a>' +
+              '<a class="share" href="#">Reply this </a>' +
               '<a class="share" href="#">Share facebook</a>' +
               '</p>' +
-              '<b style="display:none; margin-left:10px;">Bạn đã cảm ơn nhận xét này</b>' +
-              '<span>Nhận xét này hữu ích với bạn ?</span>' +
+              '<b style="display:none; margin-left:10px;">You thanked this comment</b>' +
+              '<span>This comment is helpful to you?</span>' +
               '<button class="btn btn-primary thank-review">' +
-              ' &nbsp  &nbsp  &nbsp  &nbspCảm ơn</button>' +
+              ' &nbsp  &nbsp  &nbsp  &nbspThank You</button>' +
               '<div class="clear"></div>' +
               '</div>' +
               '</div>' +
@@ -270,7 +270,7 @@
           // console.log(roundingmedium);
       
           $(".total-review-point").append(roundingmedium + "/5");
-          $(".count_comment").append("(Hiện tại có " + total + " nhận xét)");
+          $(".count_comment").append("(There are " + total + " reviews)");
       
       
           $("#user_name").val('');
@@ -278,7 +278,7 @@
           $("#textarea").val('');
           }
           else{
-              alert("Bạn vui lòng nhập thông tin trước khi đánh giá");
+              alert("You have not entered all information yet");
           }
       
       
