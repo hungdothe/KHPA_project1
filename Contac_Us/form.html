@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
 
         <style>
         .formBox{
@@ -153,14 +157,14 @@ Thank you for choosing us. We will contact you after 24h </h3>
               <div class="col-sm-12">
                 <div class="inputBox ">
                   <div class="inputText"></div>
-                  <input type="text" name="" class="input" placeholder="Full-name" required="ban nhap sai">
+                  <input type="text"  class="input input1" placeholder="Full-name" required="ban nhap sai">
                 </div>
               </div>
 
               <div class="col-sm-12">
                 <div class="inputBox">
                   <div class="inputText"></div>
-                  <input type="text" name="" class="input" placeholder="Phone number" required>
+                  <input type="text"  class="input input2" placeholder="Phone number" required>
                 </div>
               </div>
             </div>
@@ -169,14 +173,14 @@ Thank you for choosing us. We will contact you after 24h </h3>
               <div class="col-sm-12">
                 <div class="inputBox">
                   <div class="inputText"></div>
-                  <input type="text" name="" class="input" placeholder="Addres" required>
+                  <input type="text"  class="input input3" placeholder="Addres" required>
                 </div>
               </div>
 
               <div class="col-sm-12">
                 <div class="inputBox">
                   
-                  <input type="text" name="" class="input" placeholder="Gender" required>
+                  <input type="text" class="input input4" placeholder="Gender" required>
                 </div>
               </div>
             </div>
@@ -185,7 +189,7 @@ Thank you for choosing us. We will contact you after 24h </h3>
               <div class="col-sm-12">
                 <div class="inputBox">
                  
-                  <textarea class="input" placeholder="Comment" required></textarea>
+                  <textarea class="input input5" placeholder="Comment" required></textarea>
                 </div>
               </div>
             </div>
@@ -237,7 +241,7 @@ Thank you for choosing us. We will contact you after 24h </h3>
               </div></div>
               <br><br>
 
-<button class="btn btn-primary btn-lg btn-block" type="submit" class="font-size:15̀%;">Register to create an event now</button>
+<button class="btn btn-primary btn-lg btn-block" type="submit" id="submit_1" class="font-size:15̀%;">Register to create an event now</button>
             </form>
   
 </div>
@@ -289,6 +293,24 @@ Thank you for choosing us. We will contact you after 24h </h3>
     calc_and_show_total();
     
   })(this.jQuery);
+
+
+    $("#submit_1").click(function(e){
+      e.preventDefault();
+      var input1 = $(".input1").val();
+      var input2 = $(".input2").val();
+      var input3 = $(".input3").val();
+      var input4 = $(".input4").val();
+      var input5 = $(".input5").val();
+      if( input1 != '' && input2 != '' && input3 != '' && input4 != '' && input5 != '')
+      {
+        alert("submit Succsess !");
+      }
+      else{
+        alert("false");
+      }
+
+});
   </script>
   
   

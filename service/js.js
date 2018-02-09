@@ -27,10 +27,6 @@
       $("#write_comment").click(function() {
           $("#popup").show(1000);
       });
-      // $('.hide_popup').click(function(){
-      // 	$(this).hide(1000);
-      // 	$(#write_comment).removeClass('hide_popup');
-      // });
       $("#hide").click(function() {
           $("#popup").hide(1000);
       });
@@ -228,7 +224,7 @@
           $("#append").prepend("<div class='item'>" +
               "<div class='row'>" +
               '<div class="col-sm-2" style="text-align: center;">' +
-              '<img src="user.png" width="65px;">' +
+              '<img src="../luffy.png" width="65px;">' +
               '<p class="user">' + name + '</p>' +
               '</div>' +
       

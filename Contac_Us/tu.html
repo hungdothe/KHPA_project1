@@ -11,7 +11,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" type="text/css" href="style_contact.css">
 
-
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,7 +115,7 @@ With JASON EVENT, you have all the tools you need to organize your event success
     </div>
     <div class="input-group" >
       <span class="input-group-addon" style="background: white;"> <i class="glyphicon glyphicon-phone"></i></span>
-      <input type="password" class="form-control" id="pwd" placeholder="Phone number"  name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Phone number"  name="pwd">
     </div>
     <br>
     
@@ -122,7 +125,7 @@ With JASON EVENT, you have all the tools you need to organize your event success
     font-size: 13px;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px 120px;" class="btn btn-primary text-center "><a href ="form.html" style=" text-decoration: none; ">   REGISTER TO BECOME A PARTNER </a></button>
+    padding: 10px 120px;" class="btn btn-primary text-center " id="submit_1" onclick="myFun()"><a href ="form.html" style=" text-decoration: none; ">   REGISTER TO BECOME A PARTNER </a></button>
 
   </form>
 
@@ -243,15 +246,15 @@ University</a>
        
     
     
-    <input type="text" name="username"  placeholder="Username" required />
-    <input type="text" name="email"  placeholder="E-mail" required="ban nhap" />
+    <input type="text" name="username" class="input_x"  placeholder="Username" required />
+    <input type="text" name="email" class="input_y"  placeholder="E-mail" required="ban nhap" />
     
-    <input type="password" name="password2" placeholder="phone number" required />
+    <input type="password" name="password2" class="input_z" placeholder="phone number" required />
     
    
   <textarea class="form-control" rows="5" placeholder="comment" id="comment" required></textarea>
   <br>
-  <div class="submit">  <a href="mailto:webmaster@example.com">  Sign me up</a> </div>
+  <div class="submit">  <a href="mailto:webmaster@example.com" id="submit_2">  Sign me up</a> </div>
    <!-- <input type="submit" class="pull-left"  name="signup_submit"  value="Sign me up" />
       </div> -->
     </div>
@@ -358,3 +361,25 @@ University</a>
 
 </body>
 </html>
+<script type="text/javascript">
+  $("#submit_1").click(function(){
+    var input1 = $("#email").val();
+    var input2 = $("#pwd").val();
+    if(input1 == '' || input2 ==  '')
+    {
+      alert("Submit and False!");
+    }
+  });
+  $("#submit_2").click(function(e){
+      var x1 = $(".input_x").val();
+      var x2 = $("input_y").val();
+      var x3 = $("input_z").val();
+      var x4 = $("#comment").val();
+
+      if(x1 == '' || x2 == '' || x3 == '' || x4 == '' ){
+          e.preventDefault();
+          alert("Submit and False!");
+      }
+
+  });
+</script>
